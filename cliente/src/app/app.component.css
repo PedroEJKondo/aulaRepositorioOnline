@@ -1,0 +1,6 @@
+#headerSpace {
+    top: 60px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+}

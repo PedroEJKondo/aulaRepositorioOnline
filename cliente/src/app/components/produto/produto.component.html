@@ -1,0 +1,44 @@
+<div class="row m-auto" id="ajust">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-sm btn-primary"><span class="fa fa-plus"></span> Registar produto</button>
+            </div>
+            <div class="card-body">
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>Ordem</td>
+                                <td>Nome do produto</td>
+                                <td>Preço</td>
+                                <td>Quantidade</td>
+                                <td>Data de criação</td>
+                                <td>Data de Alteração</td>
+                                <td>Operações</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of this.prods ; index as i">
+                                <td>{{ i+1 }}</td>
+                                <td>{{ item.nome }}</td>
+                                <td>{{ item.preco }}</td>
+                                <td>{{ item.qtd }}</td>
+                                <td>{{ item.created_at }}</td>
+                                <td>{{ item.updated_at }}</td>
+                                <td>
+                                    <a href="http://" class="btn btn-sm btn-secondary mr-2">Visualizar</a>
+                                    <a href="http://" class="btn btn-sm btn-info mr-2">Editar</a>
+                                    <a href="http://" class="btn btn-sm btn-danger mr-2">Eliminar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="text text-center">Total de produtos cadastrados ( {{ this.prods?.length }} )</div>
+            </div>
+        </div>
+    </div>
+</div>
