@@ -1,12 +1,12 @@
-import { ProdutoService } from './../../core/service/produto.service';
+import { ProdutoService } from './../../../core/service/produto.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-produto',
-  templateUrl: './produto.component.html',
-  styleUrls: ['./produto.component.css']
+  selector: 'app-produto-list',
+  templateUrl: './produto-list.component.html',
+  styleUrls: ['./produto-list.component.css']
 })
-export class ProdutoComponent implements OnInit {
+export class ProdutoListComponent implements OnInit {
 
   public prods = [];
 

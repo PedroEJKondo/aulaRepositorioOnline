@@ -9,7 +9,19 @@ export class ApiServiceService {
 
   constructor(private http: HttpClient) { }
 
-  public index(path:string, httpParam:HttpParams = new HttpParams()):any{
+  public get(path:string, httpParam:HttpParams = new HttpParams()):any{
     return this.http.get(environment.app_url+path,{params:httpParam});
+  }
+  
+  public post(path:string, httpParam:HttpParams = new HttpParams()):any{
+    return this.http.post(environment.app_url+path,{params:httpParam});
+  }
+
+  public put(path:string, httpParam:HttpParams = new HttpParams()):any{
+    return this.http.put(environment.app_url+path,{params:httpParam});
+  }
+  
+  public delete(path:string, httpParam:HttpParams = new HttpParams()):any{
+    return this.http.delete(environment.app_url+path,{params:httpParam});
   }
 }

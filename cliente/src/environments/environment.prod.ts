@@ -1,6 +1,6 @@
 export const server_config = {
   port: '3333',
-  host: 'localhost'
+  host: '192.168.43.164'
 };
 
 export const environment = {
