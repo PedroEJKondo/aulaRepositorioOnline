@@ -10,14 +10,19 @@ export class ProdutoService {
  
   constructor(private api:ApiServiceService) { }
 
+  /*** Listagem de todos os produtos */
   public index():any{return this.api.get('/produtos');}
 
-  public show(params:any):any{return this.api.get('/produtos/',params);}
+  /** Visualizar um produto apenas */
+  public show(params:any):any{return this.api.get('/produtos/'+params);}
 
+  /** Registar um produto */
   public post(produto):any{ return this.api.post('/produtos',produto); }
 
+  /** Actualizar um produto */
   public put(produto, params):any{ return this.api.put('/produtos/'+params,produto); }
   
+  /** Eliminar um produto */
   public delete(params):any{return this.api.delete('/produtos/'+params);}
 }
 
