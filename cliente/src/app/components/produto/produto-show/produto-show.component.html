@@ -1,1 +1,28 @@
-<p>produto-show works!</p>
+<div class="row">
+    <div class="col-lg-4 mx-auto">
+        <div *ngIf="mensagem">
+            Produto <b>{{ this.nomeProduto }}</b> actualizado com sucesso.
+        </div><br>
+        <div class="card">
+            <div class="card-header">
+                Visualizar produto
+            </div>
+            <div class="card-body">
+
+                <div class="col-md-12">
+                    <label>Nome </label>: {{ this.produto?.nome }}
+                </div>
+                <div class="col-md-12">
+                    <label>Preço </label>: {{ this.produto?.preco }}
+                </div>
+                <div class="col-md-12">
+                    <label>Quantidade </label>: {{ this.produto?.qtd }}
+                </div>
+            </div>
+            <div class="card-footer text-right">
+                <a href="/produtos/edit/getId()" class="btn btn-sm btn-info mr-2">Actualizar</a>
+                <button class="btn btn-sm btn-danger mr-2" (click)="eliminar()">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>

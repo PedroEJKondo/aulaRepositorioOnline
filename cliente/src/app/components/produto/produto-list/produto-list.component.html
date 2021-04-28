@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <a routerLink="/produtos/create" class="btn btn-primary"> Registar Produto</a>
+                <a routerLink="/produtos/create" class="btn btn-primary btn-sm"> Registar Produto</a>
             </div>
             <div class="card-body">
                 <div class="col-md-12">
@@ -28,8 +28,7 @@
                                 <td>{{ item.updated_at }}</td>
                                 <td>
                                     <a routerLink="/produtos/show/{{ item.id }}" class="btn btn-sm btn-secondary mr-2">Visualizar</a>
-                                    <a routerLink="/produtos/edit/{{ item.id }}" class="btn btn-sm btn-info mr-2">Editar</a>
-                                    <a routerLink="/produtos/delete/{{ item.id }}" class="btn btn-sm btn-danger mr-2">Eliminar</a>
+                                    <a routerLink="/produtos/edit/{{ item.id }}" class="btn btn-sm btn-info mr-2">Actualizar</a>
                                 </td>
                             </tr>
                         </tbody>
