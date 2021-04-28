@@ -7,15 +7,17 @@ import { ProdutoShowComponent } from './components/produto/produto-show/produto-
 
 export const routes: Routes = [
 
-  { path: '', redirectTo: 'produto/list', pathMatch: 'full' },
+  { path: '', redirectTo: 'produtos/list', pathMatch: 'full' },
  
-  { path: 'produto/list', component: ProdutoListComponent },
+  { path: 'produtos/list', component: ProdutoListComponent },
 
-  { path: 'produto/create', component: ProdutoCreateComponent },
+  { path: 'produtos/create', component: ProdutoCreateComponent },
 
-  { path: 'produto/show/:params', component: ProdutoShowComponent },
+  { path: 'produtos/show/:params', component: ProdutoShowComponent },
   
-  { path: 'produto/edit/:params', component: ProdutoEditComponent  } 
+  { path: 'produtos/edit/:params', component: ProdutoEditComponent  },
+
+  { path: 'produtos/delete/:params', component: ProdutoEditComponent  } 
 
   // { path: '**', '': 'Página de erro' },
 ];
