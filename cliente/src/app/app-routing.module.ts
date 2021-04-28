@@ -1,27 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
+import { ProdutoEditComponent } from './components/produto/produto-edit/produto-edit.component';
+import { ProdutoShowComponent } from './components/produto/produto-show/produto-show.component';
 
 export const routes: Routes = [
 
-  { path: '', redirectTo: 'list', pathMatch: 'full' },
+  { path: '', redirectTo: 'produto/list', pathMatch: 'full' },
  
-  { path: 'list', component: ProdutoListComponent },
+  { path: 'produto/list', component: ProdutoListComponent },
 
-  { path: 'create', component: ProdutoListComponent },
+  { path: 'produto/create', component: ProdutoCreateComponent },
 
-  { path: 'show/:params', component: ProdutoListComponent },
+  { path: 'produto/show/:params', component: ProdutoShowComponent },
   
-  { path: 'edit/:params', component: ProdutoListComponent  } 
+  { path: 'produto/edit/:params', component: ProdutoEditComponent  } 
 
-  
-  // {
-  //   path: 'produtos',
-  //   loadChildren: () =>
-  //     import('./components/produto/produto.module').then(
-  //       (m) => m.ProdutoModule
-  //     ),
-  // }
   // { path: '**', '': 'Página de erro' },
 ];
 

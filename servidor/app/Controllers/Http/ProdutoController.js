@@ -72,7 +72,7 @@ class ProdutoController {
             return response.json({ data: null, msg: 'Nenhuma informação encontrada..' });
         }
 
-		prod.merge(input);
+        prod.merge(input);
         // prod.nome = input.nome;
         // prod.preco = input.preco;
         // prod.qtd = input.qtd;

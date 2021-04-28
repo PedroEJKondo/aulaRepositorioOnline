@@ -1,6 +1,7 @@
 import { HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Produto } from 'src/app/models/Produto';
 import { ApiServiceService } from '../provide/http/api-service.service';
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,8 @@ export class ProdutoService {
 
   public show(params:any):any{return this.api.get('/produtos/',params);}
 
-  public post(form: FormGroup):any{
-    return this.api.post('/produtos',form.value);
+  public post(produto):any{
+    return this.api.post('/produtos',produto);
   }
 
   public put(form: FormGroup, params):any{

@@ -1,1 +1,35 @@
-<p>produto-create works!</p>
+<div class="row m-auto" id="ajust">
+    <div class="col-lg-8">
+        <div class="card">
+            <form novalidate>
+                <div class="card-header">
+                    Registo de produto
+                </div>
+                <div class="card-body">
+
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="name">Nome </label>
+                        <input class="form-control" name="nome" [(ngModel)]="produto.nome" placeholder="Ex: Informe o nome do produto" type="text" required/>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="preco">Preço </label>
+                        <input class="form-control" name="preco" [(ngModel)]="produto.preco" placeholder="Ex: Informe o preco do produto" type="text" required/>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="col-form-label" for="qtd">Quantidade </label>
+                        <input class="form-control" name="qtd" [(ngModel)]="produto.qtd" placeholder="Ex: Informe a quantidade do produto" type="text" required/>
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-danger btn-square m-2" (click)="onReload()"> <span class="fas fa-refresh"></span> Limpar</button>
+                    <button class="btn btn-primary mr-1 btn-square" type="submit" (click)="onSubmit()"> <i class="fa fa-save"></i> Registar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-lg-8" *ngIf="mensagem">
+        Produto <b>{{ this.nomeProduto }}</b> registado com sucesso.
+    </div>
+</div>
