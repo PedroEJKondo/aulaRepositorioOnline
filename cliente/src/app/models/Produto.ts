@@ -1,5 +1,6 @@
 export class Produto {
-    nome: string = null;
-    preco: number = null;
-    qtd: string = null;
-  }
+  id: number = -1;
+  nome: string = null;
+  preco: number = null;
+  qtd: string = null;
+}
